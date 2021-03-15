@@ -4,11 +4,11 @@
 
 <head>
     <title>Nemocón</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="https://previews.123rf.com/images/asmati/asmati1702/asmati170211271/72957051-elemento-de-plantilla-de-dise%C3%B1o-de-letra-n-signo-icono-negro-con-la-ruta-de-sombra-estilo-plano-sobre-f.jpg" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -17,7 +17,7 @@
         <div class="background"></div>
         <div class="iniciar">
             <h2>Nemocón</h2>
-            <input type="checkbox" name="iniciar" id="iniciar">
+            <input type="checkbox" name="iniciar" id="iniciar" onclick="iniciar()">
             <label for="iniciar"> Iniciar</label>
         </div>
     </div>
@@ -25,7 +25,7 @@
 
     <div class="container">
             <div class="items header">
-                <div class="nemocon ">Nemocón</div>
+                <div class="nemocon"><b>Nemocón</b></div>
                 <div class="search">
                     <div class="containerbar">
                         <input type="search" id="search" placeholder="Search..." required />
@@ -46,13 +46,13 @@
                             
                             <nav class="nav-menu">
                                 <ul>
-                                    <li><a href="#" title="Como llegar"><i class="fas fa-location-arrow"></i></a></li>
-                                    <li><a href="#" title="Lugares"><i class="fas fa-place-of-worship"></i></a></li>
-                                    <li><a href="#" title="Comida"><i class="fas fa-utensils"></i></a></li>
-                                    <li><a href="#" title="Hoteles"><i class="fas fa-hotel"></i></a></li>
-                                    <li><a href="#" title="Taxis"><i class="fas fa-taxi"></i></a></li>
-                                    <li><a href="#" title="Buses"><i class="fas fa-bus"></i></a></li>
-                                    <li><a href="#" title="Hospitales"><i class="fas fa-clinic-medical"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Como llegar"><i class="fas fa-location-arrow"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Lugares"><i class="fas fa-place-of-worship"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Comida"><i class="fas fa-utensils"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Hoteles"><i class="fas fa-hotel"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Taxis"><i class="fas fa-taxi"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Buses"><i class="fas fa-bus"></i></a></li>
+                                    <li><a class="btnCategory" href="#" title="Hospitales"><i class="fas fa-clinic-medical"></i></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -68,8 +68,19 @@
         </div>
 
 
+    <script>
+        function iniciar(){
+            if(document.querySelector('#iniciar').checked){
+                document.querySelector('.welcome').style.display = 'none';
+                document.querySelector('.container').style.display='grid';
+            }else{
+                document.querySelector('.container').style.display = 'none';
+                document.querySelector('.welcome').style.display = 'block';
+            }
+        }
+    </script>
 
-    <!-- <script type="module" src="./script.js"></script> -->
+    <script type="module" src="scripts/eventos.js"></script>
     <script src="https://kit.fontawesome.com/6f1bc8fc38.js" crossorigin="anonymous"></script>
 </body>
 
