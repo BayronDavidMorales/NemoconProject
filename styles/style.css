@@ -50,18 +50,18 @@
     display: none;
 }
 .iniciar h2{
-    font-size: 6rem;
+    font-size: 8vw;
     font-family: 'Expletus Sans';
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
 }
 .iniciar label{
     font-family: 'Expletus Sans';
-    border: 4px solid #fff;
+    border: 3px solid #fff;
     border-radius: 50px;
-    margin-top: 10rem;
-    font-size: 30px;
-    padding: 0 45px;
+    margin-top: 1vw;
+    font-size: 3vw;
+    padding: 0 5vw;
 
     transition: text-decoration 0.8s, color 1s, font-weight 0.5s ease-in 0.1s;
 }
