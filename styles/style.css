@@ -16,6 +16,11 @@
     -khtml-user-select: none;
     -ms-user-select:none;
 }
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 /* Welcome */
 .welcome{
     color: #fff;
@@ -70,22 +75,32 @@
     background-color: #fff;
 }
 /* container */
-.items{
-    font-size: 25px;
-    position: sticky;
-}
+
 
 .container{  
-    display: none;
     height:100%;
     width:100%;
-    grid-template-rows: 55px;
-    grid-template-columns: 1fr;
+    display:grid;
+    grid-template-rows: 55px 1fr;
 }
-.header{
+.items{
+    font-size: 25px;
+    /* position: sticky; */
+}
+/* mapa */
+#map{
+    position: relative;
+    z-index: 0;
+    bottom: 0;
+    color: rgb(211, 211, 211);
     /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+}
+/* header */
+.header{
+    /* position: fixed; */
     display: grid;
-    /* grid-column: 1/3; */
     grid-template-columns: 150px 1fr 1fr;
     width:100%;
     font-family: 'Expletus Sans';
@@ -154,6 +169,8 @@
 
 /* menu */
 .menu{
+    position: relative;
+    z-index: 10;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -206,7 +223,9 @@ a{
     color:#fff;
     margin-top: 20px;
 }
-
+.menu:hover{
+    /* box-shadow: none; */
+}
 .hamburger i:hover{
     
     cursor: pointer;
@@ -233,6 +252,8 @@ a{
 /* Language */
 
 .select {
+    position: relative;
+    z-index: 10;
     font-family: fontAwesome;
     font-size: 1rem;
     position: absolute;
@@ -325,15 +346,7 @@ a{
 
 }
 
-/* mapa */
-.map{
-    /* background-color: #fff; */
-    /* height: 100vh; */
-    color: rgb(211, 211, 211);
-    text-align: center;
-    font-size: 400px;
-    padding-top: 80px;
-}
+
 /* hover */
 
 
