@@ -97,6 +97,14 @@ body{
     width: 100%;
     height: 100%;
 }
+#map-svg{
+    border: 1px solid red;
+    width: 50%;
+    height: 90%;
+    bottom: 0;
+    /* object-position: right bottom; */
+    /* object-fit: cover;  */
+}
 /* header */
 .header{
     /* position: fixed; */
@@ -223,9 +231,7 @@ a{
     color:#fff;
     margin-top: 20px;
 }
-.menu:hover{
-    /* box-shadow: none; */
-}
+
 .hamburger i:hover{
     
     cursor: pointer;
@@ -263,7 +269,6 @@ a{
     flex-direction: column;
     width:130px;
     height:40px;
-    /* border-bottom-left-radius: 40px; */
     cursor: pointer;
 }
 
