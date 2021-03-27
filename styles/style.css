@@ -362,8 +362,8 @@ a{
 @media (max-width: 720px){
     .iniciar{
     font-size: 10vw;
-    width: 50%;
-    /* border: 1px solid red; */
+    height: 30%;
+    border: 1px solid red;
     }
     .iniciar label{
     font-size: 8vw;
