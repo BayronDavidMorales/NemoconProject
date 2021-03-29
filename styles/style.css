@@ -97,17 +97,8 @@ body{
     z-index: 0;
     bottom: 0;
     color: rgb(211, 211, 211);
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
-}
-#mobile-svg{
-    /* border: 1px solid red; */
-    width: 50%;
-    height: 90%;
-    bottom: 0;
-    /* object-position: right bottom; */
-    /* object-fit: cover;  */
 }
 /* header */
 .header{
@@ -363,7 +354,7 @@ a{
     .iniciar{
     font-size: 10vw;
     height: 30%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     }
     .iniciar label{
     font-size: 8vw;
