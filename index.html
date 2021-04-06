@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/mapItems.css" />
     <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/map.css" />
 
     <!-- Fuente de letra -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap" rel="stylesheet">
     <!-- Simbolos de idioma -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
     <!-- SVG panning-zoom -->
@@ -28,7 +31,7 @@
 </head>
 
 <body>
-    <div class="welcome">
+    <div class="welcome animate__animated animate__fadeIn">
         <div class="background"></div>
         <div class="iniciar">
             <h2>Nemocón</h2>
@@ -37,9 +40,8 @@
         </div>
     </div>
 
-
-    <div class="container" onLoad="prueba()">
-        <div class="items header">
+    <div class="container ">
+        <div class="items header animate__animated animate__fadeInUp">
             <div class="nemocon"><b>Nemocón</b></div>
             <div class="search">
                 <div class="containerbar">
@@ -48,13 +50,12 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="items map" id="mobile-div">
+        
+        <div class="items map" id="mobile-div" style="width: 100%; height: 100%;">
             <svg version="1.1" id="mobile-svg" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                style="enable-background:new 0 0 984.4 1000; display: inline; width: inherit;
-                     min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;" xml:space="preserve">
+                style="display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit;"
+                    version="1.1">
                 <style type="text/css">
                     .st0 {
                         fill: #909090;
@@ -102,36 +103,49 @@
                     <path class="st1"
                         d="M645.5,540.4c-0.2-0.4-0.6-0.9-0.4-1.1c0.5-0.7,1-0.3,1.4,0.1C646.1,539.8,645.8,540.1,645.5,540.4z" />
                 </g>
-                <path id="mina" class="st1 place"
-                    d="M936.1,774.6l-9.5-5.5c-0.9-0.5-2.2-0.2-2.6,0.7c-1.5,3-2.3,6.2-2.6,9.4c-0.1,1,0.8,1.8,1.8,1.8h11.1
-                    	c0.9,0,1.6-0.7,1.7-1.5c0.1-1,0.4-1.9,0.7-2.8C937.1,775.9,936.8,775,936.1,774.6L936.1,774.6z M957.8,754.8
-                    	c-2.3-0.5-4.7-0.8-7.2-0.8s-4.9,0.3-7.2,0.8c-1,0.2-1.6,1.3-1.2,2.3l4.3,11c0.3,0.7,0.9,1.1,1.7,1.1h4.8c0.8,0,1.5-0.4,1.7-1.1
-                    	l4.3-11C959.4,756.1,958.9,755.1,957.8,754.8L957.8,754.8z M934.1,784.4h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7h11
-                    	c1,0,1.8-0.8,1.8-1.7v-6.8C936,785.2,935.2,784.4,934.1,784.4z M934.1,797.9h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7h11
-                    	c1,0,1.8-0.8,1.8-1.7v-6.8C936,798.7,935.2,797.9,934.1,797.9z M943,768l-4.2-9.6c-0.4-0.9-1.6-1.4-2.6-0.9
-                    	c-3.1,1.6-5.9,3.8-8.2,6.3c-0.7,0.8-0.4,2,0.5,2.5l9.5,5.5c0.7,0.4,1.7,0.3,2.3-0.3c0.6-0.5,1.2-1,1.9-1.5
-                    	C943,769.5,943.3,768.7,943,768L943,768z M966.9,781H978c1,0,1.9-0.8,1.8-1.8c-0.2-3.3-1.1-6.5-2.6-9.4c-0.5-0.9-1.7-1.2-2.6-0.7
-                    	l-9.5,5.5c-0.8,0.4-1,1.3-0.7,2.1c0.3,0.9,0.6,1.9,0.7,2.8C965.3,780.4,966,781,966.9,781z M973.1,763.8c-2.3-2.6-5.1-4.7-8.2-6.3
-                    	c-0.9-0.5-2.2-0.1-2.6,0.9l-4.2,9.6c-0.3,0.8,0,1.6,0.7,2c0.7,0.4,1.3,0.9,1.9,1.5c0.6,0.6,1.6,0.7,2.3,0.3l9.5-5.5
-                    	C973.6,765.8,973.8,764.6,973.1,763.8L973.1,763.8z M978.1,784.4h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7h11
-                    	c1,0,1.8-0.8,1.8-1.7v-6.8C979.9,785.2,979.1,784.4,978.1,784.4z M978.1,797.9h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7
-                    	h11c1,0,1.8-0.8,1.8-1.7v-6.8C979.9,798.7,979.1,797.9,978.1,797.9z M948.8,772.7v31.1c0,0.5,0.4,0.8,0.9,0.8h1.8
-                    	c0.5,0,0.9-0.4,0.9-0.8v-31.1c-0.6-0.1-1.2-0.2-1.8-0.2C950,772.6,949.4,772.6,948.8,772.7z M941.5,777.1v26.7
-                    	c0,0.5,0.4,0.8,0.9,0.8h1.8c0.5,0,0.9-0.4,0.9-0.8V774C943.7,774.8,942.4,775.8,941.5,777.1L941.5,777.1z M956.1,774v29.9
-                    	c0,0.5,0.4,0.8,0.9,0.8h1.8c0.5,0,0.9-0.4,0.9-0.8v-26.7C958.8,775.8,957.6,774.8,956.1,774L956.1,774z" />
-                <path id="hospital" class="st1 place" d="M98.7,372.8l-23.6,20.8c-0.2,0.2-0.4,0.2-0.6,0.4v20c0,1,0.8,1.7,1.7,1.7h45c1,0,1.7-0.8,1.7-1.7
-                    	v-20c-0.2-0.1-0.4-0.2-0.6-0.3L98.7,372.8z M109.1,401c0,0.5-0.4,0.9-0.9,0.9h-6.1v6.1c0,0.5-0.4,0.9-0.9,0.9h-5.2
-                    	c-0.5,0-0.9-0.4-0.9-0.9v-6.1h-6.1c-0.5,0-0.9-0.4-0.9-0.9v-5.2c0-0.5,0.4-0.9,0.9-0.9h6.1v-6.1c0-0.5,0.4-0.9,0.9-0.9h5.2
-                    	c0.5,0,0.9,0.4,0.9,0.9v6.1h6.1c0.5,0,0.9,0.4,0.9,0.9V401z M129.3,385.9l-27.7-24.4c-1.6-1.5-4.1-1.5-5.8,0l-27.7,24.4
-                    	c-0.7,0.6-0.8,1.7-0.1,2.4c0,0,0,0,0,0l2.3,2.6c0.6,0.7,1.7,0.8,2.4,0.1c0,0,0,0,0,0l24.8-21.9c0.7-0.6,1.6-0.6,2.3,0l24.8,21.9
-                    	c0.7,0.6,1.8,0.6,2.4-0.1c0,0,0,0,0,0l2.3-2.6C130,387.6,130,386.5,129.3,385.9z" />
+                <path id="mina" class="st1 place" 
+                    d="M936.1,774.6l-9.5-5.5c-0.9-0.5-2.2-0.2-2.6,0.7c-1.5,3-2.3,6.2-2.6,9.4c-0.1,1,0.8,1.8,1.8,1.8
+		                h11.1c0.9,0,1.6-0.7,1.7-1.5c0.1-1,0.4-1.9,0.7-2.8C937.1,775.9,936.8,775,936.1,774.6L936.1,774.6z M957.8,754.8
+		                c-2.3-0.5-4.7-0.8-7.2-0.8s-4.9,0.3-7.2,0.8c-1,0.2-1.6,1.3-1.2,2.3l4.3,11c0.3,0.7,0.9,1.1,1.7,1.1h4.8c0.8,0,1.5-0.4,1.7-1.1
+		                l4.3-11C959.4,756.1,958.9,755.1,957.8,754.8L957.8,754.8z M934.1,784.4h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7h11
+		                c1,0,1.8-0.8,1.8-1.7v-6.8C936,785.2,935.2,784.4,934.1,784.4z M934.1,797.9h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7
+		                h11c1,0,1.8-0.8,1.8-1.7v-6.8C936,798.7,935.2,797.9,934.1,797.9z M943,768l-4.2-9.6c-0.4-0.9-1.6-1.4-2.6-0.9
+		                c-3.1,1.6-5.9,3.8-8.2,6.3c-0.7,0.8-0.4,2,0.5,2.5l9.5,5.5c0.7,0.4,1.7,0.3,2.3-0.3c0.6-0.5,1.2-1,1.9-1.5
+		                C943,769.5,943.3,768.7,943,768L943,768z M966.9,781H978c1,0,1.9-0.8,1.8-1.8c-0.2-3.3-1.1-6.5-2.6-9.4c-0.5-0.9-1.7-1.2-2.6-0.7
+		                l-9.5,5.5c-0.8,0.4-1,1.3-0.7,2.1c0.3,0.9,0.6,1.9,0.7,2.8C965.3,780.4,966,781,966.9,781z M973.1,763.8c-2.3-2.6-5.1-4.7-8.2-6.3
+		                c-0.9-0.5-2.2-0.1-2.6,0.9l-4.2,9.6c-0.3,0.8,0,1.6,0.7,2s1.3,0.9,1.9,1.5c0.6,0.6,1.6,0.7,2.3,0.3l9.5-5.5
+		                C973.6,765.8,973.8,764.6,973.1,763.8L973.1,763.8z M978.1,784.4h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7h11
+		                c1,0,1.8-0.8,1.8-1.7v-6.8C979.9,785.2,979.1,784.4,978.1,784.4z M978.1,797.9h-11c-1,0-1.8,0.8-1.8,1.7v6.8c0,0.9,0.8,1.7,1.8,1.7
+		                h11c1,0,1.8-0.8,1.8-1.7v-6.8C979.9,798.7,979.1,797.9,978.1,797.9z M948.8,772.7v31.1c0,0.5,0.4,0.8,0.9,0.8h1.8
+		                c0.5,0,0.9-0.4,0.9-0.8v-31.1c-0.6-0.1-1.2-0.2-1.8-0.2C950,772.6,949.4,772.6,948.8,772.7z M941.5,777.1v26.7
+		                c0,0.5,0.4,0.8,0.9,0.8h1.8c0.5,0,0.9-0.4,0.9-0.8V774C943.7,774.8,942.4,775.8,941.5,777.1L941.5,777.1z M956.1,774v29.9
+		                c0,0.5,0.4,0.8,0.9,0.8h1.8c0.5,0,0.9-0.4,0.9-0.8v-26.7C958.8,775.8,957.6,774.8,956.1,774L956.1,774z"/>
+                <path name="mina" class="bc" d="
+                    M 950 780
+                    m -50, 0
+                    a 50,50 0 1,1 100,0
+                    a 50,50 0 1,1 -100,0
+                    " />
+                <path id="hospital" class="st1 place" d="M98.7,372.8l-23.6,20.8c-0.2,0.2-0.4,0.2-0.6,0.4v20c0,1,0.8,1.7,1.7,1.7h45
+		                c1,0,1.7-0.8,1.7-1.7v-20c-0.2-0.1-0.4-0.2-0.6-0.3L98.7,372.8z M109.1,401c0,0.5-0.4,0.9-0.9,0.9h-6.1v6.1c0,0.5-0.4,0.9-0.9,0.9
+		                H96c-0.5,0-0.9-0.4-0.9-0.9v-6.1H89c-0.5,0-0.9-0.4-0.9-0.9v-5.2c0-0.5,0.4-0.9,0.9-0.9h6.1v-6.1c0-0.5,0.4-0.9,0.9-0.9h5.2
+		                c0.5,0,0.9,0.4,0.9,0.9v6.1h6.1c0.5,0,0.9,0.4,0.9,0.9V401z M129.3,385.9l-27.7-24.4c-1.6-1.5-4.1-1.5-5.8,0l-27.7,24.4
+		                c-0.7,0.6-0.8,1.7-0.1,2.4l0,0l2.3,2.6c0.6,0.7,1.7,0.8,2.4,0.1l0,0l24.8-21.9c0.7-0.6,1.6-0.6,2.3,0l24.8,21.9
+		                c0.7,0.6,1.8,0.6,2.4-0.1l0,0l2.3-2.6C130,387.6,130,386.5,129.3,385.9z" />
+                <path name="hospital" class="bc" d="
+                     M 90 380
+                     m -50, 0
+                     a 50,50 0 1,1 100,0
+                     a 50,50 0 1,1 -100,0
+                     " />
+                
             </svg>
-
+            <label for="hospital" class="mm"></label>
             <!-- el menu va dentro del mapa  -->
             <div class="items menu">
 
                 <input type="checkbox" id="btn-menu" unchecked="true">
-                <label for="btn-menu" class="hamburger"> <i class="fas fa-bars"></i></label>
+                <label for="btn-menu"  class="hamburger" > <i class="fas fa-bars"></i></label>
 
                 <nav class="nav-menu">
                     <ul>
@@ -148,7 +162,6 @@
                     </ul>
                 </nav>
             </div>
-
             <!-- Lenguaje -->
             <div class="select" tabindex="1">
                 <input class="selectopt" name="test" type="radio" id="opt1" checked>
@@ -162,33 +175,32 @@
         <div class="modal modal-close">
             <p class="close"><i class="fas fa-times"></i></p>
             <div class="r1">
-                <h2><b>NAME</b></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, repellendus quia. Ratione
-                    exercitationem veniam consequuntur tempore adipisci cum, quas neque! Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Quam obcaecati qui adipisci incidunt repudiandae voluptatem ea dolor
-                    soluta blanditiis magnam, tenetur necessitatibus deleniti cupiditate voluptas maiores deserunt, commodi
-                    odio non!
+                <h2 id="placeName"><b>NAME</b></h2>
+                <p id='placeDescription'>
+                    placeDescription
                     <br> <br>
                     abierto: lorem ipsum
                     <br> <br>
                     tel: lorem ipsum
-            
                 </p>
-                <i class="fas fa-external-link-alt"></i>
-                <i class="fas fa-route"></i>
+                <a class="btn2-modal external-link" target="_blank"><i class="fas fa-external-link-alt "></i></a>
+                <a class="btn2-modal how-to-get" target="_blank"><i class="fas fa-route"></i></a>
             </div>
             <div class="r2">
-                <img src="images/imgsvg.svg" alt="">
-                <i class="fas fa-chevron-left"></i>
-                <i class="fas fa-chevron-right"></i>
+                <!-- <div class="img-container"><img id="placeImages" src="images/imgsvg.svg" alt=""></div> -->
+                <div class="img-container" id="placeImages"></div>
+                <p id="left"  class="btn-modal"><i class="fas fa-chevron-left"></i></p>
+                <p id="right" class="btn-modal"><i class="fas fa-chevron-right"></i></p>
             </div>
         </div>
     </div>
     <script>
         function iniciar() {
             if (document.querySelector('#iniciar').checked) {
-                document.querySelector('.welcome').style.display = 'none';
+                document.querySelector('.welcome').setAttribute("class", "welcome animate__animated animate__fadeOut")
+                setTimeout(()=>{ document.querySelector('.welcome').style.display = 'none'}, 600);
                 document.querySelector('.container').style.display = 'grid';
+                document.querySelector('.container').setAttribute("class", "container animate__animated animate__fadeIn")
 
                 var eventsHandler;
 

@@ -1,0 +1,11 @@
+
+#mobile-div{
+    width: 600px;
+    height: 650px;
+    position: relative;
+    z-index: 0;
+    bottom: 0;
+    color: rgb(211, 211, 211);
+    width: 99vw;
+    height: 99vh;
+}

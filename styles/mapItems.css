@@ -1,3 +1,10 @@
+svg #sd{
+    cursor: pointer;
+}
+svg .bc{
+    fill: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
 svg .place{
     cursor: pointer;
 }
@@ -7,5 +14,4 @@ svg .st1 {
 }
 svg .st1:hover {
     fill:  rgba(242, 115, 4, 1);
-
 }

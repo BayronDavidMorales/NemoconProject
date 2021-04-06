@@ -21,6 +21,9 @@ body{
     height: 100vh;
     overflow: hidden;
 }
+i{
+    cursor: pointer;
+}
 /* Welcome */
 .welcome{
     color: #fff;
@@ -67,19 +70,16 @@ body{
     font-family: 'Expletus Sans';
     border: 3px solid #fff;
     border-radius: 50px;
-    /* margin-top: 1vw; */
     font-size: 3vw;
     padding: 0 5vw;
-    
+    cursor: pointer;    
     transition: text-decoration 0.8s, color 1s, font-weight 0.5s ease-in 0.1s;
-    /* border: 1px solid red; */
 }
 .iniciar label:hover{
     color: black;
     background-color: #fff;
 }
 /* container */
-
 
 .container{  
     height:100%;
@@ -91,15 +91,7 @@ body{
     font-size: 25px;
     /* position: sticky; */
 }
-/* mapa */
-#mobile-div{
-    position: relative;
-    z-index: 0;
-    bottom: 0;
-    color: rgb(211, 211, 211);
-    width: 100%;
-    height: 100%;
-}
+
 /* header */
 .header{
     /* position: fixed; */
@@ -251,7 +243,6 @@ a{
     border-bottom-right-radius: 10px;
 }
 /* Language */
-
 .select {
     position: relative;
     z-index: 10;
