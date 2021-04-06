@@ -1,3 +1,3 @@
 # Nemocon-project
 Click here: 
-https://bayrondavidmorales.github.io/NemoconProject/
+https://bayrondavidmorales.github.io/easyMap/
